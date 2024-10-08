@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CrudMongoDB.Models.Carro>
+
+@{
+    ViewData["Title"] = "Lista de Carros";
+}
+
+<h1>Lista de Carros</h1>
+
+<p>
+    <a asp-action="NovoCarro">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CarroId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Fabricante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Tipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarroId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fabricante)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    <a asp-action="AtualizarCarro" asp-route-carroId="@item.CarroId">Atualizar</a>
+                    <form asp-action="ExcluirCarro" asp-route-carroId="@item.CarroId" method="post" style="display:inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
