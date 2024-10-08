@@ -78,13 +78,15 @@ Você verá a página inicial da aplicação. A partir daqui, você pode acessar
 
 ## Testes
 
-Os testes unitários estão implementados usando xUnit e podem ser executados com o seguinte comando:
+Os testes unitários foram implementados utilizando xUnit e podem ser executados com o seguinte comando:
 
 ```bash
 dotnet test
 ```
 
-Para criar os testes com xUnit, utilizei o comando `dotnet new xunit -n Testes`. Os testes foram implementados e funcionam normalmente. No entanto, ao executar o comando `dotnet run` duas vezes seguidas, ocorreu um erro de duplicidade. Para evitar esse problema e garantir que o código funcione corretamente sempre que alguém clonar o projeto e rodar o código, deixei os testes desabilitados. Contudo, eles estão operacionais e funcionando normalmente. 
+Utilizei o comando `dotnet new xunit -n Testes` para criar a estrutura inicial. Embora os testes funcionem corretamente, ao executar `dotnet run` duas vezes seguidas, ocorreu um erro de duplicidade.
+
+Para evitar esse problema e garantir que o código funcione corretamente após o clone do projeto, desabilitei os testes, mantendo apenas o `CarrosControllerTest.cs` na pasta. Porém todos os testes estão operacionais e prontos para uso.
 
 
 
