@@ -84,7 +84,7 @@ Os testes unitários foram implementados utilizando xUnit e podem ser executados
 dotnet test
 ```
 
-Utilizei o comando `dotnet new xunit -n Testes` para criar a estrutura inicial. Embora os testes funcionem corretamente, ao executar `dotnet run` duas vezes seguidas, ocorreu um erro de duplicidade.
+Utilizei o comando `dotnet new xunit -n Testes` para criar a estrutura inicial. Embora os testes funcionem corretamente, ao executar `dotnet run` duas vezes seguidas, ocorreu um erro de duplicidade na pasta Bin.
 
 Para evitar esse problema e garantir que o código funcione corretamente após o clone do projeto, desabilitei os testes, mantendo apenas o `CarrosControllerTest.cs` na pasta. Porém todos os testes estão operacionais e prontos para uso.
 
