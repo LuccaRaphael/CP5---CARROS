@@ -84,3 +84,7 @@ Os testes unitários estão implementados usando xUnit e podem ser executados co
 dotnet test
 ```
 
+Para criar os testes com xUnit, utilizei o comando `dotnet new xunit -n Testes`. Os testes foram implementados e funcionam normalmente. No entanto, ao executar o comando `dotnet run` duas vezes seguidas, ocorreu um erro de duplicidade. Para evitar esse problema e garantir que o código funcione corretamente sempre que alguém clonar o projeto e rodar o código, deixei os testes desabilitados. Contudo, eles estão operacionais e funcionando normalmente. 
+
+
+
